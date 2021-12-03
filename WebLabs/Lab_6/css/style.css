@@ -1,0 +1,139 @@
+body {
+    height: 100%;
+    padding: 25px;
+    font-family: "Comic Sans MS", serif;
+    font-size: 35px;
+    background: linear-gradient(0deg, rgb(0, 0, 0), rgba(20, 60, 60, 1));
+    color: #f2b309;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 1px 1px 2px black, 0 0 1em #f2b309;
+}
+
+div {
+    background: radial-gradient(rgb(18, 127, 73), rgba(0, 0, 0, .25));
+    border: 3px solid black;
+    border-radius: 20px;
+    font-size: 30px;
+    margin: 50px auto;
+}
+
+.column {
+    word-wrap: break-word;
+    width: 200px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.column-text {
+    text-align: center;
+    word-wrap: break-word;
+    padding: 25px;
+    column-count: 7;
+    column-gap: normal;
+    column-width: auto;
+    column-rule: 3px solid black;
+    box-sizing: content-box;
+}
+
+.textarea {
+    padding: 25px;
+}
+
+textarea {
+    resize: horizontal;
+    max-width: 100%;
+}
+
+.bonk, .cursed, .feel, .laugh {
+    text-align: center;
+    padding: 20px;
+}
+
+.bonk {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.bonk-emoji{
+    transition: .5s;
+}
+
+.bonk-emoji:hover {
+    transform: scaleX(2);
+    transition: 1s;
+}
+
+.bonk-emoji:active {
+    animation: bruh 2s infinite ease-in-out;
+}
+
+.cursed {
+    position: relative;
+    width: 100%;
+    height: 440px;
+}
+
+.cursed-emoji {
+    transition: .5s;
+    position: absolute;
+    left: 25%;
+}
+
+.cursed-emoji:hover {
+    transform: scale(3);
+    transition: 2s;
+}
+
+.cursed-emoji:active {
+    animation: move 2s infinite ease-in-out;
+}
+
+.feel-emoji {
+    transition: 1s;
+}
+
+.feel-emoji:active {
+    perspective: initial;
+    transform: rotateY(1080deg);
+    transition: 1s;
+}
+
+.laugh-emoji {
+    transition: 1s;
+}
+
+.laugh-emoji:hover{
+    perspective: initial;
+    perspective-origin: right;
+    transform: rotateX(30deg) rotateY(30deg)
+}
+
+.laugh-emoji:active {
+    perspective: initial;
+    perspective-origin: right;
+    transform: rotateX(30deg) rotateY(30deg) translate3d(-200px, 200px, -500px);
+}
+
+@keyframes bruh {
+    from, to{}
+    25% {transform: scaleX(3); transition: 1s}
+    50% {transition: .5s}
+    75% {transform: scaleY(3); transition: 1s}
+    100% {transition: .5s}
+}
+
+@keyframes move {
+    from,
+    to {
+        left: 0;
+    }
+    25%,
+    75% {left: 100%;
+        right: 100%}
+    50% {left: 30%;
+        right: 30%}
+}
